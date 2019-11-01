@@ -51,3 +51,35 @@
 .expiry {
 
 }
+
+.invalid-input {
+  border-color: #aa1111;
+  color: #aa1111 !important;
+}
+
+.invalid-input:focus {
+  border-color: #aa1111;
+  box-shadow: none;
+}
+
+.invalid-input::-webkit-input-placeholder {
+  color: #aa1111 !important;
+}
+
+.invalid-input::-moz-placeholder {
+  color: #aa1111 !important;
+}
+
+.invalid-input::-ms-placeholder {
+  color: #aa1111 !important;
+}
+
+.invalid-input::placeholder {
+  color: #aa1111 !important;
+}
+
+.invalid-input-message {
+  color: #aa1111;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
