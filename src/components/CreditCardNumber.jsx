@@ -23,7 +23,7 @@ const contentChanged = (e, dispatch) => {
 }
 
 const isInputInvalid = (input_state) => {
-  if (input_state.containsNonNumericChars) {
+  if (input_state.containsNonNumericChars || input_state.isEmpty || input_state.isTooShort) {
     return true;
   } else {
     return false;
@@ -39,6 +39,8 @@ function CreditCardNumber () {
       <Label for="credit-card-number">Credit Card Number</Label>
       <Input className={isInputInvalid(current_state) ? "invalid-input" : ""} type="text" name="credit-card-number" id="credit-card-number" placeholder="XXXX XXXX XXXX XXXX" value={current_state.value} onChange={(e) => contentChanged(e, dispatch)} maxlength="19" />
       <ErrorMessage message="Not all characters are numbers!" visible={current_state.containsNonNumericChars} />
+      <ErrorMessage message="Please enter your card number!" visible={current_state.isEmpty} />
+      <ErrorMessage message="The credit card number is too short!" visible={current_state.isTooShort} />
     </FormGroup>
   );
 }
