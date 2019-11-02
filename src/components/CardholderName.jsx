@@ -16,8 +16,8 @@ function CardholderName () {
     <FormGroup>
       <Label for="cardholder-name">Cardholder Name</Label>
       <Input className={(isEmpty) ? "invalid-input" : ""} type="text" name="cardholder-name" id="cardholder-name" placeholder="Mr C R Holder" onChange={(e) => contentChanged(e, dispatch)} />
+      <ErrorMessage message="Please enter the name on your card!" visible={isEmpty} />
     </FormGroup>
-    <ErrorMessage message="Please enter the name on your card!" visible={isEmpty} />
     </React.Fragment>
   );
 }
