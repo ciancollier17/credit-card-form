@@ -20,6 +20,10 @@ const contentChanged = (e, dispatch) => {
   }
 
   dispatch({type: "CREDIT_CARD_NUMBER_UPDATE", payload: processed_value});
+
+  if (e.target.value) {
+    dispatch({type: "CREDIT_CARD_LOGO_CHECK", payload: e.target.value});
+  }
 }
 
 const isInputInvalid = (input_state) => {

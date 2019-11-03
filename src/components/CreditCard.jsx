@@ -1,4 +1,5 @@
 import React from 'react';
+import CreditCardLogo from './CreditCardLogo';
 
 function CreditCard () {
   return (
@@ -7,9 +8,7 @@ function CreditCard () {
         <div className="top-section">
           <img className="chip" src="chip.png" style={{float: 'left', height: '1.2rem', paddingLeft: '0.5rem', marginTop: '1.5rem'}} />
         </div>
-        <div className="top-section">
-          <img src="mastercard.png" />
-        </div>
+        <CreditCardLogo />
       </div>
       <div>
         <h3>0123 4567 8954 2343</h3>
