@@ -3,6 +3,7 @@
   z-index: 1000;
   height: 7rem;
   width: 50%;
+  color: #ffffff;
   background-color: #6c757d;
   top: -4rem;
   left: 25%;
@@ -19,9 +20,44 @@
 #credit-card h3 {
   font-family: 'Stint Ultra Expanded', cursive;
   font-size: 0.7rem;
-  padding-left: 0.5rem;
-  color: #ffffff;
   text-shadow: 1px 1px #000000;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+@-webkit-keyframes text-incoming {
+  0%   { opacity: 0;
+         transform: translate(0, -10px); }
+  100% { opacity: 1;
+         transform: translate(0, 10px); }
+}
+
+@-moz-keyframes text_incoming {
+  0%   { opacity: 0;
+         transform: translate(0, -10px); }
+  100% { opacity: 1;
+         transform: translate(0, 10px); }
+}
+
+@-o-keyframes text_incoming {
+  0%   { opacity: 0;
+         transform: translate(0, -10px); }
+  100% { opacity: 1;
+         transform: translate(0, 10px); }
+}
+
+@keyframes text_incoming {
+  0%   { opacity: 0;
+         transform: translate(0, -10px); }
+  100% { opacity: 1;
+         transform: translate(0, 0); }
+}
+
+#current-number {
+  -webkit-animation: text_incoming 0.5s;
+  -moz-animation: text_incoming 0.5s;
+  -o-animation: text_incoming 0.5s;
+  animation: text_incoming 0.5s;
 }
 
 #credit-card h4 {
