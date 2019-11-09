@@ -1,6 +1,7 @@
 import React from 'react';
 import CreditCardLogo from './CreditCardLogo';
 import CreditCardGraphicNumber from './CreditCardGraphicNumber';
+import CreditCardGraphicExpiryDate from './CreditCardGraphicExpiryDate';
 
 function CreditCard () {
   return (
@@ -15,13 +16,10 @@ function CreditCard () {
         <CreditCardGraphicNumber />
       </div>
       <div>
-        <div className="expiry">
-          <h4>Expires</h4>
-          <h4>03/11/2019</h4>
-        </div>
+        <CreditCardGraphicExpiryDate />
         <div className="expiry">
           <h4>Valid From</h4>
-          <h4>03/11/2015</h4>
+          <h4>XX/XXXX</h4>
         </div>
       </div>
     </div>
