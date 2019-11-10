@@ -1,4 +1,4 @@
-function CreditCardReducer (initialState = {logo: "mastercard", prec_numbers: "", unused_numbers: "XXXX XXXX XXXX XXXX"}, action) {
+function CreditCardReducer (initialState = {logo: "mastercard", prec_numbers: "", unused_numbers: "XXXX XXXX XXXX XXXX", flipped: false}, action) {
   switch (action.type) {
     case "CREDIT_CARD_LOGO_CHECK":
       switch(action.payload[0]) {
@@ -27,6 +27,12 @@ function CreditCardReducer (initialState = {logo: "mastercard", prec_numbers: ""
         prec_numbers: action.payload,
         unused_numbers: new_unused_chars
       }
+      break;
+    case "FLIP_CREDIT_CARD":
+      return {
+        ...initialState,
+        flipped: !initialState.flipped
+      };
       break;
     default:
       return initialState;
