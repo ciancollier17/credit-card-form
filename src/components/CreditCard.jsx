@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import CreditCardLogo from './CreditCardLogo';
 import CreditCardGraphicNumber from './CreditCardGraphicNumber';
 import CreditCardGraphicExpiryDate from './CreditCardGraphicExpiryDate';
+import CreditCardGraphicCVC from './CreditCardGraphicCVC';
 
 function CreditCard () {
   const credit_card = useSelector(full_state => full_state.creditCard);
@@ -51,11 +52,7 @@ function CreditCard () {
           <div id="magnetic-strip"></div>
         </div>
         <div>
-          <div id="cvc-strip">
-            <div id="cvc-card">
-              XXX
-            </div>
-          </div>
+          <CreditCardGraphicCVC />
         </div>
         <div>
         </div>

@@ -58,14 +58,6 @@
   background-color: #dddddd;
 }
 
-#cvc-card {
-  position: absolute;
-  right: 0.2rem;
-  top: 0;
-  color: #444444;
-  font-size: 0.6rem;
-}
-
 #credit-card h3 {
   font-family: 'Stint Ultra Expanded', cursive;
   font-size: 0.7rem;
@@ -74,7 +66,7 @@
   padding-right: 0;
 }
 
-@-webkit-keyframes text-incoming {
+@-webkit-keyframes text_incoming {
   0%   { opacity: 0;
          transform: translate(0, -10px); }
   100% { opacity: 1;
@@ -145,38 +137,17 @@
   float: left;
 }
 
-.expiry {
-
+#cvc-card {
+  position: absolute;
+  right: 0.2rem;
+  top: 0;
+  color: #444444;
+  font-size: 0.6rem;
 }
 
-.invalid-input {
-  border-color: #aa1111;
-  color: #aa1111 !important;
-}
-
-.invalid-input:focus {
-  border-color: #aa1111;
-  box-shadow: none;
-}
-
-.invalid-input::-webkit-input-placeholder {
-  color: #aa1111 !important;
-}
-
-.invalid-input::-moz-placeholder {
-  color: #aa1111 !important;
-}
-
-.invalid-input::-ms-placeholder {
-  color: #aa1111 !important;
-}
-
-.invalid-input::placeholder {
-  color: #aa1111 !important;
-}
-
-.invalid-input-message {
-  color: #aa1111;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+#cvc-card span.cvc-number {
+  -webkit-animation: text_incoming 0.5s;
+  -moz-animation: text_incoming 0.5s;
+  -o-animation: text_incoming 0.5s;
+  animation: text_incoming 0.5s;
 }

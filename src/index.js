@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./formcontainer.css";
 import "./creditcard.css";
+import "./form.css";
 
 let store = createStore(reducers);
 
