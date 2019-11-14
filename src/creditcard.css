@@ -16,6 +16,31 @@
   transition: transform 1s;
 }
 
+/* Medium Devices - E.g Tablets */
+@media only screen and (max-width: 992px) {
+  #credit-card {
+    width: 70%;
+    left: 15%;
+  }
+}
+
+/* Small Devices - e.g Phones */
+@media only screen and (max-width: 768px) {
+  #credit-card {
+    width: 50%;
+    position: static;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Very Small Devices - e.g Portrait Phones */
+@media only screen and (max-width: 576px) {
+  #credit-card {
+    width: 65%;
+  }
+}
+
 .flipped {
   transform: rotate3d(0, 1, 0, 90deg);
   -webkit-transition: transform 1s;
