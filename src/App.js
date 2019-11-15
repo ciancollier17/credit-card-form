@@ -6,7 +6,7 @@ function App () {
   return (
     <div id="content">
       <div className="row">
-        <div id="form-container" className="col-md-4">
+        <div id="form-container" className="col-lg-4" style={{width: "100%"}}>
           <CreditCard />
           <CreditCardForm />
         </div>
