@@ -1,0 +1,61 @@
+#loading-page-text {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+#loading-page-graphic {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@-webkit-keyframes loading-animation {
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@-moz-keyframes loading-animation {
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@-o-keyframes loading-animation {
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes loading-animation {
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.loading-page-graphic-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #6c757d;
+  -webkit-animation: loading-animation 1.5s infinite;
+  -moz-animation: loading-animation 1.5s infinite;
+  -o-animation: loading-animation 1.5s infinite;
+  animation: loading-animation 1.5s infinite;
+}

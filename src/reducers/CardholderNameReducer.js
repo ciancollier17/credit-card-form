@@ -3,14 +3,13 @@ const CardholderNameReducer = (initialState = {value: "", isEmpty: false}, actio
     case "CARDHOLDER_NAME_UPDATE":
       return {
         value: action.payload,
-        isEmpty: false
+        isEmpty: false,
       };
       break;
     case "VALIDATE":
-      console.log("run");
       return {
-        value: initialState.value,
-        isEmpty: !initialState.value
+        ...initialState,
+        isEmpty: !initialState.value,
       };
     default:
       return initialState;
