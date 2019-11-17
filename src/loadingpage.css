@@ -1,12 +1,15 @@
 #loading-page-text {
   text-align: center;
   padding-bottom: 3rem;
+  font-size: 1.3rem;
 }
 
 #loading-page-graphic {
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
+  margin: auto;
+  margin-bottom: 3rem;
 }
 
 @-webkit-keyframes loading-animation {
@@ -41,7 +44,7 @@
 
 @keyframes loading-animation {
   50% {
-    transform: scale(0.5);
+    transform: scale(1.5);
   }
 
   100% {
@@ -50,12 +53,15 @@
 }
 
 .loading-page-graphic-circle {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   background-color: #6c757d;
-  -webkit-animation: loading-animation 1.5s infinite;
-  -moz-animation: loading-animation 1.5s infinite;
-  -o-animation: loading-animation 1.5s infinite;
-  animation: loading-animation 1.5s infinite;
+}
+
+.loading-page-graphic-circle-animation {
+  -webkit-animation: loading-animation 1.5s;
+  -moz-animation: loading-animation 1.5s;
+  -o-animation: loading-animation 1.5s;
+  animation: loading-animation 1.5s;
 }

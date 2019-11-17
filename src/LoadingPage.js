@@ -1,16 +1,13 @@
 import React from 'react';
+import LoadingPageGraphic from './components/LoadingPageGraphic';
 
 function LoadingPage () {
   return (
     <div id="content">
       <div className="row">
-        <div id="form-container" className="col-lg-4" style={{width: "100%"}}>
+        <div id="form-container" className="col-lg-4" style={{width: "100%", display: "block"}}>
           <p id="loading-page-text">Processing Your Payment</p>
-          <div id="loading-page-graphic">
-            <div className="loading-page-graphic-circle"></div>
-            <div className="loading-page-graphic-circle"></div>
-            <div className="loading-page-graphic-circle"></div>
-          </div>
+          <LoadingPageGraphic />
         </div>
       </div>
     </div>
