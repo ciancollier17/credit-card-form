@@ -6,6 +6,8 @@ import {Provider} from 'react-redux';
 import reducers from './reducers';
 import App from './App';
 import LoadingPage from './LoadingPage';
+import FinishedPage from './FinishedPage';
+import ErrorPage from './ErrorPage';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./formcontainer.css";
@@ -20,6 +22,8 @@ const routing = (
     <Router>
       <Route exact path="/" component={App} />
       <Route path="/loading" component={LoadingPage} />
+      <Route path="/finished" component={FinishedPage} />
+      <Route path="/error" component={ErrorPage} />
     </Router>
   </Provider>
 );

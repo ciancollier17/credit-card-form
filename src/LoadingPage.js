@@ -1,7 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useSelector} from 'react-redux';
 import LoadingPageGraphic from './components/LoadingPageGraphic';
+import axios from 'axios';
 
-function LoadingPage () {
+function LoadingPage (props) {
+  const {cardholderName, CVC, creditCardNumber, expiryDate} = useSelector(full_state => full_state);
+
+  useEffect(() => {
+    axios.post('https://jsonplaceholder.typicode.com/users', {
+      cardholderName,
+      creditCardNumber,
+      expiryDate,
+      CVC
+    }).then((res) => {
+      props.history.push('/finished');
+    }).catch((err) => {
+      document.history.push('/error');
+    });
+  }, []);
+
   return (
     <div id="content">
       <div className="row">
