@@ -7,15 +7,16 @@ function LoadingPage (props) {
   const {cardholderName, CVC, creditCardNumber, expiryDate} = useSelector(full_state => full_state);
 
   useEffect(() => {
+    // Send data to back end
     axios.post('https://jsonplaceholder.typicode.com/users', {
       cardholderName,
       creditCardNumber,
       expiryDate,
       CVC
     }).then((res) => {
-      props.history.push('/finished');
+      props.history.push('/finished/success');
     }).catch((err) => {
-      document.history.push('/error');
+      props.history.push('/finished/error');
     });
   }, []);
 

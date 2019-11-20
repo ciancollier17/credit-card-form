@@ -1,0 +1,33 @@
+#endpage-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+#endpage-text-small {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+#endpage-graphic {
+  border-radius: 50%;
+  color: #ffffff;
+  margin: auto;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}

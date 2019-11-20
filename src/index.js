@@ -7,13 +7,13 @@ import reducers from './reducers';
 import App from './App';
 import LoadingPage from './LoadingPage';
 import FinishedPage from './FinishedPage';
-import ErrorPage from './ErrorPage';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./formcontainer.css";
 import "./creditcard.css";
 import "./form.css";
 import "./loadingpage.css";
+import "./endpages.css";
 
 let store = createStore(reducers);
 
@@ -22,8 +22,7 @@ const routing = (
     <Router>
       <Route exact path="/" component={App} />
       <Route path="/loading" component={LoadingPage} />
-      <Route path="/finished" component={FinishedPage} />
-      <Route path="/error" component={ErrorPage} />
+      <Route path="/finished/:errororsuccess" component={FinishedPage} />
     </Router>
   </Provider>
 );
