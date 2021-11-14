@@ -6,9 +6,14 @@ pipeline {
 
   }
   stages {
-    stage('Checkout') {
+    stage('Install Dependencies') {
       steps {
-        git(url: 'https://github.com/ciancollier17/credit-card-form.git', branch: 'master')
+        sh 'npm install'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'npm run build'
       }
     }
 
