@@ -5,6 +5,9 @@ pipeline {
     }
 
   }
+  environment {
+    'CI' = false  
+  }
   stages {
     stage('Install Dependencies') {
       steps {
