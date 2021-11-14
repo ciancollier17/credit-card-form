@@ -24,7 +24,7 @@ pipeline {
         BUCKET_NAME = credentials('bucket-name') 
       }
       steps {
-        sh "aws s3 cp build ${env.BUCKET_NAME} --recursive"
+        sh 'aws s3 cp build $BUCKET_NAME --recursive'
       }
     }
   }
