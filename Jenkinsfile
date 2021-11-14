@@ -19,6 +19,9 @@ pipeline {
         sh 'npm run build'
       }
     }
-
+    stage('Deploy') {
+      steps {
+        sh "aws s3 cp build ${credentials(bucket-name')} --recursive"
+    }
   }
 }
