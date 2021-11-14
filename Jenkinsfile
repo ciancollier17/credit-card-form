@@ -20,8 +20,11 @@ pipeline {
       }
     }
     stage('Deploy') {
+      environment {
+        BUCKET_NAME = credentials('bucket-name') 
+      }
       steps {
-        sh "aws s3 cp build ${credentials('bucket-name')} --recursive"
+        sh "aws s3 cp build ${env.BUCKET_NAME} --recursive"
       }
     }
   }
